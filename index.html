@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="second-button">9b</button>
+    <br />
+    <br />
+    <button onclick="determineTheMove('heads')">heads</button>
+    <button onclick="determineTheMove('tails')">tails</button>
+    <p class="moves"></p>
+    <br />
+
+    <input
+      type="text"
+      placeholder="Name"
+      class="js-input-name"
+      onkeydown="handleNameKeydown(event);"
+    />
+    <button onclick="getName();">Submit</button>
+    <p class="js-name"></p>
+
+    <br />
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = Free shipping</p>
+    <input
+      type="text"
+      class="js-input-cost"
+      onkeydown="handleCostKeydown(event);"
+    />
+    <button class="js-calculate-button" onclick="calculateShipping();">
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
+
+    <br /><br /><br />
+
+    <input
+      type="text"
+      class="js-input-text"
+      onkeyup="handleTextKeyup();"
+      placeholder="Type anything here!"
+    />
+    <p class="js-text"></p>
+
+    <br /><br /><br />
+
+    <div>
+      <button
+        onclick="
+        showCartQuantity();
+        
+        "
+      >
+        Show Quantity
+      </button>
+      <button
+        onclick="
+
+        
+
+            updateCartQuantity(1)
+
+    "
+      >
+        Add to Cart
+      </button>
+      <button
+        onclick="
+
+            updateCartQuantity(2, 8)
+       
+    "
+      >
+        +2
+      </button>
+      <button
+        onclick="
+        
+        updateCartQuantity(3, 7)
+
+      
+    "
+      >
+        +3
+      </button>
+
+      <button
+        onclick="
+
+        updateCartQuantity(4, 6)
+
+       
+    "
+      >
+        +4
+      </button>
+      <button
+        onclick="
+        updateCartQuantity(5, 5)
+
+   
+"
+      >
+        +5
+      </button>
+
+      <button
+        onclick="
+
+            removeCartQuantity (1)
+       
+    "
+      >
+        Remove from Cart
+      </button>
+
+      <button
+        onclick="
+
+            removeCartQuantity (2,2)
+    
+"
+      >
+        -2
+      </button>
+      <button
+        onclick="
+         removeCartQuantity (3,3)
+   
+"
+      >
+        -3
+      </button>
+
+      <button
+        onclick="
+        resetCartQuantity();
+        
+    "
+      >
+        Reset Cart
+      </button>
+      <p class="js-reset-status"></p>
+      <p class="js-cart-quantity">/p></p>
+    </div>
+
+    <br /><br /><br />
+    <div>
+      <p class="js-calculation-display"></p>
+      <p>
+        <button
+          onclick="
+              number(1);
+            
+        
+        "
+        >
+          1
+        </button>
+        <button
+          onclick="
+               number(2);
+        
+    
+    "
+        >
+          2
+        </button>
+        <button
+          onclick="
+        
+              number(3);
+        
+    
+    "
+        >
+          3
+        </button>
+        <button
+          onclick="
+             number(`.`);
+        
+    
+    "
+        >
+          .
+        </button>
+        <button
+          onclick="
+             number(` + `);
+        
+    
+    "
+        >
+          +
+        </button>
+        <button
+          onclick="
+        
+              //  console.log(result(result));
+              //  localStorage.setItem('calculate', calculation);
+              displayResult();
+        "
+        >
+          =
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="
+               number(4);
+      
+    
+    "
+        >
+          4</button
+        ><button
+          onclick="
+              number(5);
+    
+    
+    "
+        >
+          5</button
+        ><button
+          onclick="
+              number(6);
+    
+    
+    "
+        >
+          6
+        </button>
+        <button
+          onclick="
+               number(` - `);
+      
+    
+    "
+        >
+          -
+        </button>
+        <button
+          onclick="
+               number(` * `);
+      
+    
+    "
+        >
+          *
+        </button>
+        <button
+          onclick="
+               number(` / `);
+      
+    
+    "
+        >
+          /
+        </button>
+      </p>
+
+      <p>
+        <button
+          onclick="
+              number(7);
+        
+    
+    "
+        >
+          7
+        </button>
+        <button
+          onclick="
+              number(8);
+        
+    
+    "
+        >
+          8
+        </button>
+        <button
+          onclick="
+              number(9);
+        
+    
+    "
+        >
+          9
+        </button>
+        <button
+          onclick="
+             number(0);
+        
+    
+    "
+        >
+          0
+        </button>
+        <button
+          onclick="
+              // calculation = '';
+              // console.log(calculation);
+              // localStorage.setItem('calculate', calculation);
+              clearResult();
+          "
+        >
+          Clear
+        </button>
+      </p>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
